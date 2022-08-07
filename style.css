@@ -1,9 +1,11 @@
 body{
     min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
 }
 #container{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
 }
 #sidebar{
     background-color: rgb(52, 131, 241);
@@ -14,12 +16,28 @@ body{
     grid-row: 1/3;
     font-size: 1.5rem;
 }
-
+.group1{
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.group2 div, .group3 div{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 21px;
+    font-weight: bold;
+}
 #header{
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
-
 .row1, .row2{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -27,13 +45,46 @@ body{
 }
 .left{
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    margin-left: 30px;
+    align-items: center;
+}
+input[type=search]{
+    border-radius: 2em;
+    background-color: rgb(206, 219, 224);
+    border: none;
+    height: 30px;
+    width: 600px;
+}
+.row2 .left{
+    margin-top: 0;
+}
+.avatar, .ava{
+    border-radius: 50%;
+}
+.greet{
+    font-weight: bold;
+    font-size: 12px;
+}
+.name{
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 20px;
 }
 .right{
     display: flex;
     gap: 30px;
     justify-content: flex-end;
-    margin-right: 70px;
+    align-items: center;
+    margin-right: 50px;
+}
+.btn{
+    background-color: rgb(52, 131, 241);
+    color: white;
+    border: none;
+    border-radius: 2em;
+    width: 90px;
+    height: 35px;
 }
 #main-container{
     grid-column: 2 / 3;
@@ -47,29 +98,62 @@ body{
     gap: 20px;
     padding: 0 20px 20px 20px;
 }
+.projects h3{
+    margin-left: 20px;
+    margin-top: 30px;
+}
 .project{
     background-color: white;
     padding: 25px;
+    border-radius: 1em;
+}
+.project-header{
+    font-weight: bold;
+}
+.icon{
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    align-items: center;
+    margin-top: 20px;
 }
 .announcements{
     margin-right: 20px;
 }
+.announcements h3{
+    margin-top: 30px;
+}
 .announcement-container{
     background-color: white;
     padding: 10px;
+    border-radius: 1em;
 }
 .announcement-header{
     margin: 0;
     padding: 0;
     font-weight: bold;
 }
-.announcement-p{
+p{
     margin-top: 0;
+}
+.trending{
+    margin-right: 20px;
 }
 .user-container{
     background-color: white;
     padding: 10px;
+    border-radius: 1em;
 }
-.trending{
-    margin-right: 20px;
+.user{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.description :first-child{
+    font-weight: bold;
+}
+p, .description :last-child{
+    color: rgb(129, 126, 126);
+    font-size: 14px;
 }
